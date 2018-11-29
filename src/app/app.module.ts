@@ -9,30 +9,35 @@ import { HomeComponent } from './home/home.component';
 import { MovieComponent } from './movie/movie.component';
 
 import { MovieService } from './movie.service';
+import { AppUserService } from './app-user.service';
+import { LoginComponent } from './login/login.component';
 
-import { ClarityModule } from '@clr/angular';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { routes } from './app.router';
 
-const appRoutes: Routes = [
-  { path: '', component: HomeComponent },
-  { path: 'movie/:movieID', component: MovieComponent }
-];
+// import { ClarityModule } from '@clr/angular';
+// import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+// const appRoutes: Routes = [
+//   { path: '', component: HomeComponent },
+//   { path: 'movie/:movieID', component: MovieComponent }
+// ];
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    MovieComponent
+    MovieComponent,
+    LoginComponent,
   ],
   imports: [
-    ClarityModule,
-    BrowserAnimationsModule,
+    // ClarityModule,
+    // BrowserAnimationsModule,
     BrowserModule,
     FormsModule,
     HttpClientModule,
-    RouterModule.forRoot(appRoutes)
+    routes,
   ],
-  providers: [ MovieService ],
+  providers: [ MovieService, AppUserService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
