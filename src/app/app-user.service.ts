@@ -13,6 +13,10 @@ export class AppUserService {
     // tslint:disable-next-line:max-line-length
     return this._http.get(this.base_url);
   }
+  
+  registerUser(user) {
+    return this._http.post(this.base_url, user);
+  }  
     
   // getUserData() {
   //   this._base.getUser()
