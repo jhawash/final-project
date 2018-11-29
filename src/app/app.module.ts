@@ -14,8 +14,8 @@ import { LoginComponent } from './login/login.component';
 
 import { routes } from './app.router';
 
-// import { ClarityModule } from '@clr/angular';
-// import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ClarityModule, ClrFormsNextModule } from '@clr/angular';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 // const appRoutes: Routes = [
 //   { path: '', component: HomeComponent },
@@ -30,8 +30,9 @@ import { routes } from './app.router';
     LoginComponent,
   ],
   imports: [
-    // ClarityModule,
-    // BrowserAnimationsModule,
+    ClrFormsNextModule, 
+    ClarityModule,
+    BrowserAnimationsModule,
     BrowserModule,
     FormsModule,
     HttpClientModule,

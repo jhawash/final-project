@@ -1,104 +1,30 @@
-<!--<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">-->
-<!--<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>-->
-<!--<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>-->
-<!------ Include the above in your HEAD tag ---------->
-
-<!--<!DOCTYPE html>-->
-<!--<html>-->
-<!--<head>-->
-<!--  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">-->
-<!--<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>-->
-<!--<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>-->
-<!--	<title>Login Page</title>-->
-<!--   Made with love by Mutiullah Samim -->
-   
-<!--	Bootsrap 4 CDN-->
-<!--	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">-->
-    
-<!--    Fontawesome CDN-->
-<!--	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">-->
-
-<!--	Custom styles-->
-<!--	<link rel="stylesheet" type="text/css" href="styles.css">-->
-<!--</head>-->
-<!--<body>-->
-
-<div class="container">
-	<div class="d-flex justify-content-center h-100">
-		<div class="card">
-			<div class="card-header">
-				<h3>Sign In</h3>
-				<div class="d-flex justify-content-end social_icon">
-					<span><i class="fab fa-facebook-square"></i></span>
-					<span><i class="fab fa-google-plus-square"></i></span>
-					<span><i class="fab fa-twitter-square"></i></span>
-				</div>
-			</div>
-			<div class="card-body">
-				<form>
-					<div class="input-group form-group">
-						<div class="input-group-prepend">
-							<span class="input-group-text"><i class="fas fa-user"></i></span>
-						</div>
-						<input type="text" class="form-control" placeholder="username">
-						
-					</div>
-					<div class="input-group form-group">
-						<div class="input-group-prepend">
-							<span class="input-group-text"><i class="fas fa-key"></i></span>
-						</div>
-						<input type="password" class="form-control" placeholder="password">
-					</div>
-					<div class="row align-items-center remember">
-						<input type="checkbox">Remember Me
-					</div>
-					<div class="form-group">
-						<input type="submit" value="Login" class="btn float-right login_btn">
-					</div>
-				</form>
-			</div>
-			<div class="card-footer">
-				<div class="d-flex justify-content-center links">
-					Don't have an account?<a href="#">Sign Up</a>
-				</div>
-				<div class="d-flex justify-content-center">
-					<a href="#">Forgot your password?</a>
-				</div>
-			</div>
-		</div>
-	</div>
+<div class="login-wrapper">
+    <form class="login">
+        <section class="title">
+            <h3 class="welcome">Welcome to</h3>
+            Company Product Name
+            <h5 class="hint">Use your Company ID to sign in or create one now</h5>
+        </section>
+        <div class="login-group">
+            <div class="auth-source select">
+                <select id="login-auth-source-1">
+                    <option>Local Users</option>
+                    <option>Administrator</option>
+                </select>
+            </div>
+            <input class="username" type="text" id="login_username" placeholder="Username">
+            <input class="password" type="password" id="login_password" placeholder="Password">
+            <div class="checkbox">
+                <input type="checkbox" id="rememberme">
+                <label for="rememberme">
+                    Remember me
+                </label>
+            </div>
+            <div class="error active">
+                Invalid user name or password
+            </div>
+            <button type="submit" class="btn btn-primary">NEXT</button>
+            <a href="javascript://" class="signup">Sign up for a Company ID</a>
+        </div>
+    </form>
 </div>
-
-
-<!--</style>-->
-<!--</head>-->
-<!--<body>-->
-
-<!--<h2>Login Form</h2>-->
-
-<!--<form action="/action_page.php">-->
-<!--  <div class="imgcontainer">-->
-<!--    <img src="img_avatar2.png" alt="Avatar" class="avatar">-->
-<!--  </div>-->
-
-<!--  <div class="container">-->
-<!--    <label for="uname"><b>Username</b></label>-->
-<!--    <input type="text" placeholder="Enter Username" name="uname" required>-->
-
-<!--    <label for="psw"><b>Password</b></label>-->
-<!--    <input type="password" placeholder="Enter Password" name="psw" required>-->
-        
-<!--    <button type="submit">Login</button>-->
-<!--    <label>-->
-<!--      <input type="checkbox" checked="checked" name="remember"> Remember me-->
-<!--    </label>-->
-<!--  </div>-->
-
-<!--  <div class="container" style="background-color:#f1f1f1">-->
-<!--    <button type="button" class="cancelbtn">Cancel</button>-->
-<!--    <span class="psw">Forgot <a href="#">password?</a></span>-->
-<!--  </div>-->
-<!--</form>-->
-
-<!--</body>-->
-<!--</html>-->
