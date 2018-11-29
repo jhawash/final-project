@@ -16,11 +16,7 @@ import { routes } from './app.router';
 
 import { ClarityModule, ClrFormsNextModule } from '@clr/angular';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
-// const appRoutes: Routes = [
-//   { path: '', component: HomeComponent },
-//   { path: 'movie/:movieID', component: MovieComponent }
-// ];
+import { RegisterComponent } from './register/register.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +24,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     HomeComponent,
     MovieComponent,
     LoginComponent,
+    RegisterComponent,
   ],
   imports: [
     ClrFormsNextModule, 
