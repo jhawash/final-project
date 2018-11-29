@@ -13,7 +13,7 @@ export class MovieService {
 
   searchMovie(movie: string) {
     this.movie_string = movie;
-    return this._http.get(this.movie_url + 'search/movie?query=' + this.movie_string + '&api_key=' + this.api_key);
+    return this._http.get(this.movie_url + 'search/movie?query=' + this.movie_string + '&api_key=' + this.api_key + '&inlcude_adult=false');
   }
 
   getUpcomingMovies() {
