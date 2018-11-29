@@ -13,6 +13,7 @@ export const router: Routes = [
     { path: 'home', component: HomeComponent },
     { path: 'movie', component: MovieComponent },
     { path: 'register', component: RegisterComponent },
+    { path: 'login', component: LoginComponent },
 ];
 
 export const routes: ModuleWithProviders = RouterModule.forRoot(router);
