@@ -1,3 +1,17 @@
 .card-body {
     text-align: center;
+    background-color: #002538;
+}
+.container {
+    background-color: #17a085;
+}
+.full {
+    background-color: #002538;
+}
+.card-header {
+   background-color: #002538;
+   color:white;
+}
+.text-center {
+    color:white;
 }

@@ -1,5 +1,14 @@
-<input [(ngModel)] = "user.lastName">
-<input [(ngModel)] = "user.firstName">
+<p>First Name
+    <input [(ngModel)] = "user.firstName">
+</p>
+<p>Last Name
+    <input [(ngModel)] = "user.lastName">
+</p>
+<p>Email
 <input [(ngModel)] = "user.email">
-<input [(ngModel)] = "user.password">
-<button (click)="onRegister()">CLICK ME</button>
+</p>
+<p>Password
+<input [(ngModel)] = "user.password" type="password">
+</p>
+<button (click)="onRegister()">Sign Up</button>
+

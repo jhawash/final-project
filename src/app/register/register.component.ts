@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { AppUserService } from '../app-user.service';
 
 @Component({
@@ -6,7 +6,7 @@ import { AppUserService } from '../app-user.service';
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.css']
 })
-export class RegisterComponent implements OnInit {
+export class RegisterComponent  {
   
   user = {
   "firstName": "",
@@ -15,15 +15,22 @@ export class RegisterComponent implements OnInit {
   "password":""
   }
   
-  constructor(public _appUser: AppUserService) { 
-    
-  }
+  constructor(public _appUser: AppUserService) { }
 
   onRegister() {
     this._appUser.registerUser(this.user)
-       .subscribe( (pedro)=>{ 
-          console.log(pedro, "hit")
+       .subscribe( (res:any) =>{ 
+         console.log(res)
+          sessionStorage.setItem('token', res.token  );
+          sessionStorage.setItem('userId', res.userId  );
        })
   }
-
+ onLogIn() {
+    this._appUser.logInUser(this.user)
+       .subscribe( (res:any) =>{ 
+         console.log(res)
+          sessionStorage.setItem('token', res.token  );
+          sessionStorage.setItem('userId', res.userId  );
+       })
+  }
 }

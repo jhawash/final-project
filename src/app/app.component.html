@@ -6,11 +6,21 @@
 <!--<button (click) = 'getMovieData()'>Click</button>-->
 <header class="header-6">
     <div class="branding">
-        ...
+        <img src="./assets/movies.png">
     </div>
     <div class="header-nav">
-        <a routerLink="register" class="active nav-link nav-text">Sign Up</a>
+        <a routerLink="home" class="nav-link nav-text">Home</a>
+        <a routerLink="register" class="nav-link nav-text">Sign Up</a>
         <a routerLink="login" class="nav-link nav-text">LogIn</a>
+         <form class="search">
+            <label for="search_input">
+            <input id="search_input" type="text" placeholder="Search for Movies..." name="movie" [(ngModel)]="movie">
+            </label>
+        </form>
+        <!--<input type="text" class="nav-link nav text" placeholder="Search Movies"-->
+        <!--      name="movie"-->
+        <!--      [(ngModel)]="movie">-->
+              
     </div>
     <div class="header-actions">
         <a href="javascript://" class="nav-link nav-icon">
