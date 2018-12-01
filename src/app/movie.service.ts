@@ -10,7 +10,8 @@ export class MovieService {
   private id: number;
 
   constructor(public _http: HttpClient) { }
-
+  movies: any;
+  
   searchMovie(movie: string) {
     this.movie_string = movie;
     return this._http.get(this.movie_url + 'search/movie?query=' + this.movie_string + '&api_key=' + this.api_key + '&inlcude_adult=false');
@@ -18,7 +19,12 @@ export class MovieService {
 
   getUpcomingMovies() {
     // tslint:disable-next-line:max-line-length
-    return this._http.get(this.movie_url + 'discover/movie?primary_release_date.gte=2018-04-15&primary_release_date.lte=2018-07-31' + '&api_key=' + this.api_key);
+    this._http.get(this.movie_url + 'discover/movie?primary_release_date.gte=2018-04-15&primary_release_date.lte=2018-07-31' + '&api_key=' + this.api_key)
+       .subscribe(data => {
+      this.movies = data['results'];
+      console.log(this.movies, "hit")
+       });
+    
   }
 
   getPopularMovies() {

@@ -13,11 +13,12 @@ export class HomeComponent implements OnInit {
   movie: any;
 
   constructor(public movieService: MovieService) {
+    this.movieService.getUpcomingMovies()
     // get upcoming movies
-    this.movieService.getUpcomingMovies().subscribe(data => {
-      this.upcoming_movies = data['results'];
-      // console.log(this.upcoming_movies);
-    });
+    // this.movieService.getUpcomingMovies().subscribe(data => {
+    //   this.upcoming_movies = data['results'];
+    //   // console.log(this.upcoming_movies);
+    // });
 
     // get popular movies
     this.movieService.getPopularMovies().subscribe(data => {
