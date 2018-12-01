@@ -12,13 +12,13 @@
     <div class="col-sm-12">
       <form>
         <div class="row">
-          <div class="col-sm-12">
+          <div class="col-sm-9">
             <input type="text" class="form-control" placeholder="Search Movies"
               name="movie"
               [(ngModel)]="movie">
           </div>
-          <div class="col-sm-4">
-            <button class="btn btn-block btn-info" routerLink = "/results"(click)="searchMovies()">Search</button>
+          <div class="col-sm-3">
+            <button class="btn btn-block btn-info btn-primary" routerLink = "/results" (click)="searchMovies()">Search</button>
           </div>
         </div>
       </form>
@@ -42,17 +42,18 @@
     </div>
   </div>
 
-  <hr>
+ 
 
   <div class="row">
     <div class="col-sm-12">
       <h1>Upcoming Movies</h1>
+      <hr>
     </div>
   </div>
 
   <div class="row">
     <div  class="col-sm-4" *ngFor="let upcoming of upcoming_movies; let i = index">
-      <div *ngIf="i < 9">
+      <div *ngIf="i < 15">
         <div class="card mt-3 mb-3">
           <div class="card-header text-center">
             {{ upcoming.release_date | date:'mediumDate' }}
@@ -67,17 +68,16 @@
     </div>
   </div>
   
-  <hr>
-
   <div class="row">
     <div class="col-sm-12">
       <h1>Popular Movies</h1>
+      <hr>
     </div>
   </div>
 
   <div class="row">
     <div  class="col-sm-4" *ngFor="let popular of popular_movies; let i = index">
-      <div *ngIf="i < 9">
+      <div *ngIf="i < 15">
         <div class="card mt-3 mb-3">
           <div class="card-header text-center">
             {{ popular.release_date | date:'mediumDate' }}

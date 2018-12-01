@@ -1,14 +1,30 @@
-<p>First Name
-    <input [(ngModel)] = "user.firstName">
-</p>
-<p>Last Name
-    <input [(ngModel)] = "user.lastName">
-</p>
-<p>Email
-<input [(ngModel)] = "user.email">
-</p>
-<p>Password
-<input [(ngModel)] = "user.password" type="password">
-</p>
-<button (click)="onRegister()">Sign Up</button>
+<!--<p>First Name-->
+<!--    <input [(ngModel)] = "user.firstName">-->
+<!--</p>-->
+<!--<p>Last Name-->
+<!--    <input [(ngModel)] = "user.lastName">-->
+<!--</p>-->
+<!--<p>Email-->
+<!--<input [(ngModel)] = "user.email">-->
+<!--</p>-->
+<!--<p>Password-->
+<!--<input [(ngModel)] = "user.password" type="password">-->
+<!--</p>-->
+<!--<button (click)="onRegister()">Sign Up</button>-->
 
+<div class="login-wrapper">
+    <div class="login">
+        <section class="title">
+            <h3 class="welcome">Welcome to</h3>
+            Moveis On Demand
+            <h5 class="hint">Use your email to sign up</h5>
+        </section>
+        <div class="login-group">
+            <input class="firstName" [(ngModel)] = "user.firstName" type="text" id="login_username" placeholder="First Name"><br>
+            <input class="lastName" [(ngModel)] = "user.lastName" type="text" id="login_username" placeholder="Last Name"><br>
+            <input class="email" [(ngModel)] = "user.email" type="text" id="login_username" placeholder="Email"><br>
+            <input class="password" input [(ngModel)] = "user.password" type="password" id="login_password" placeholder="Password">
+            <button type="submit" (click)="onRegister()" class="btn btn-primary">Submit</button>
+        </div>
+    </div>
+</div>

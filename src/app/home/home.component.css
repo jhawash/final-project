@@ -5,6 +5,10 @@
 .container {
     background-color: #17a085;
 }
+.card {
+    background-color: #002538;
+    /*border-color: #002538;*/
+}
 .full {
     background-color: #002538;
 }
@@ -14,4 +18,11 @@
 }
 .text-center {
     color:white;
+}
+.col-sm-9 {
+    background-color:white;
+    padding-left: 5px;
+    padding-bottom: 5px;
+    padding-top: 10px;
+    border-color: black;
 }

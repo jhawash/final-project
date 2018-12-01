@@ -1,9 +1,9 @@
 <div class="login-wrapper">
-    <form class="login">
+    <div class="login">
         <section class="title">
             <h3 class="welcome">Welcome to</h3>
             Moveis On Demand
-            <h5 class="hint">Use your email to sign in or create one now</h5>
+            <h5 class="hint">Use your email to sign in</h5>
         </section>
         <div class="login-group">
             <input class="email" [(ngModel)] = "user.email" type="text" id="login_username" placeholder="Username">
@@ -17,7 +17,7 @@
             <div class="error active">
                 Invalid user name or password
             </div>
-            <button type="submit" (click)="logInUser()" onclick="location.href = 'home';" class="btn btn-primary">LogIn</button>
+            <button type="submit" (click)="onLogIn()" class="btn btn-primary">LogIn</button>
         </div>
-    </form>
+    </div>
 </div>

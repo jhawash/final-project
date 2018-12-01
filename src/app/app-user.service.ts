@@ -19,7 +19,7 @@ export class AppUserService {
   }  
     
   logInUser(user) {
-    return this._http.post(this.base_url, user);
+    return this._http.post(this.base_url + "/login", user);
   }    
     
   // getUserData() {

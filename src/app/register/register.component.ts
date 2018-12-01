@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { AppUserService } from '../app-user.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-register',
@@ -15,22 +16,17 @@ export class RegisterComponent  {
   "password":""
   }
   
-  constructor(public _appUser: AppUserService) { }
+  constructor(public _appUser: AppUserService, private router: Router) { }
 
   onRegister() {
     this._appUser.registerUser(this.user)
-       .subscribe( (res:any) =>{ 
+       .subscribe( (res:any) =>{
+         this.router.navigate([`/login`]);
          console.log(res)
           sessionStorage.setItem('token', res.token  );
           sessionStorage.setItem('userId', res.userId  );
+          
        })
   }
- onLogIn() {
-    this._appUser.logInUser(this.user)
-       .subscribe( (res:any) =>{ 
-         console.log(res)
-          sessionStorage.setItem('token', res.token  );
-          sessionStorage.setItem('userId', res.userId  );
-       })
-  }
+
 }
