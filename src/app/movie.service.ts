@@ -12,7 +12,9 @@ export class MovieService {
   constructor(public _http: HttpClient) { }
   movies: any;
   moviesSearched: any;
-  searched = "Upcoming Movies" 
+  searched = "Searched Movie Results...";
+  upcoming = "Upcoming Movies...";
+  popular = "Popular Movies...";
   
   searchMovie(movie: string) {
     // this.movie_string = movie;
