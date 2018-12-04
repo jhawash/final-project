@@ -24,9 +24,9 @@
   <!--    </div>-->
   <!--  </div>-->
   <!--</div>-->
-
+<h1> {{movieService.searched}}</h1>
   <div class="row">
-    <div  class="col-sm-4" *ngFor="let movie of search_result; let i = index">
+    <div  class="col-sm-4" *ngFor="let movie of movieService.moviesSearched; let i = index">
       <div *ngIf="i < 9">
         <div class="card mt-3 mb-3">
           <div class="card-header text-center ">
@@ -46,13 +46,11 @@
 
   <div class="row">
     <div class="col-sm-12">
-      <h1>Upcoming Movies</h1>
-      <hr>
     </div>
   </div>
 
   <div class="row">
-    <div  class="col-sm-4" *ngFor="let upcoming of movieService.movies; let i = index">
+    <div  class="col-sm-4" *ngFor="let upcoming of movieService.movies, let i = index">
       <div *ngIf="i < 15">
         <div class="card mt-3 mb-3">
           <div class="card-header text-center">

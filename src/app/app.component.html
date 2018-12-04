@@ -14,7 +14,7 @@
         <a routerLink="login" class="nav-link nav-text">LogIn</a>
          <div class="search">
             <label for="search_input">
-            <input id="search_input" type="text" placeholder="Search for Movies..." name="movie" [(ngModel)]="movie">
+            <input id="search_input" (keyup.enter)="searchMovie()" type="text" placeholder="Search for Movies..." name="movie" [(ngModel)]="movie">
             </label>
         </div>
         <!--<input type="text" class="nav-link nav text" placeholder="Search Movies"-->

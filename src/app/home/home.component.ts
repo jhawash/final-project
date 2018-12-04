@@ -29,12 +29,12 @@ export class HomeComponent implements OnInit {
   }
 
   // get search results of movies
-  searchMovies() {
-    this.movieService.searchMovie(this.movie).subscribe(data => {
-      this.search_result = data['results'];
-      console.log(this.search_result);
-    });
-  }
+  // searchMovies() {
+  //   this.movieService.searchMovie(this.movie).subscribe(data => {
+  //     this.search_result = data['results'];
+  //     console.log(this.search_result);
+  //   });
+  // }
 
   ngOnInit() {
   }

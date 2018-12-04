@@ -8,17 +8,16 @@ import { MovieService } from './movie.service';
 })
 
 export class AppComponent {
-  // title = 'movies-project';
-  // movieInfo;
-  // movieInfo2;
-
+ name = "moviesFinder";
+ movie = "";
+    
   
    constructor(public _movie: MovieService){
-    name: "moviesFinder"
-    
    }
    
-   
+   searchMovie() {
+     this._movie.searchMovie(this.movie)
+   }
    
   // getMovieData() {
   //   this._movie.getMovieInfoInput()

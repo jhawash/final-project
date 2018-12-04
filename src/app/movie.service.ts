@@ -11,10 +11,16 @@ export class MovieService {
 
   constructor(public _http: HttpClient) { }
   movies: any;
+  moviesSearched: any;
+  searched = "Upcoming Movies" 
   
   searchMovie(movie: string) {
-    this.movie_string = movie;
-    return this._http.get(this.movie_url + 'search/movie?query=' + this.movie_string + '&api_key=' + this.api_key + '&inlcude_adult=false');
+    // this.movie_string = movie;
+    this._http.get(this.movie_url + 'search/movie?query=' + movie + '&api_key=' + this.api_key + '&inlcude_adult=false')
+    .subscribe(data => {
+      this.movies = data['results'];
+      console.log (this.movies, "its works!")
+    })
   }
 
   getUpcomingMovies() {
